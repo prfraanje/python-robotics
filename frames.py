@@ -26,6 +26,14 @@ else:
 import numpy as np             # numpy for matrix/vector calc.: http://numpy.scipy.org
 import transformations as tf   # for all kind of rotations etc.: http://www.lfd.uci.edu/~gohlke/code/transformations.py.html
 
+# some old versions of numpy don't have the method isclose
+# therefore, use the function below:
+def isclose(a,b):
+    if "isclose" in dir(np):
+        return np.isclose(a,b)
+    else:
+        return ( abs(a-b)<1e-6 )
+
 
 # definition of Special Orthogonal Group SE(3) of 
 # (right handed) rotation matrices
@@ -176,8 +184,8 @@ def is_so3(R,info=False):
         Rmat = R
     det = np.linalg.det(Rmat)
     is_symmetric = np.allclose(np.dot(Rmat.T,Rmat),np.eye(3))
-    if not(np.isclose(det,1)):
-        if np.isclose(det,-1):
+    if not(isclose(det,1)):
+        if isclose(det,-1):
             if info: print("det(R)=-1, rotations in so3 should be right handed.")
             return False
         else:
