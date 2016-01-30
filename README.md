@@ -31,7 +31,7 @@ Examples:
 >>> F2.label = '2'        # always set label, because this is not being done
                           # automatically 
 ```
-* [`links.py`](https://github.com/prfraanje/python-robotics/blob/master/links.py)links.py:  construction of joints with attached links and a frame located at
+* [`links.py`](https://github.com/prfraanje/python-robotics/blob/master/links.py):  construction of joints with attached links and a frame located at
              the end of the link, specified on the basis of Denavit Hartenberg
              parameters
 ```
