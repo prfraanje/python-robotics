@@ -13,7 +13,7 @@ In this course, we use the book Robot Modeling and Control by Mark W. Spong, Set
 * the easy to use [python-visual module (also called vpython)](http://www.vpython.org/) for 3D visualization
 
 ## Description and examples
-* frames.py: construction and visualization of frames in 3D, and performing
+* [`frames.py`](https://github.com/prfraanje/python-robotics/blob/master/frames.py): construction and visualization of frames in 3D, and performing
               translations, rotations, homogeneous transformations
 
 Examples:
@@ -31,7 +31,7 @@ Examples:
 >>> F2.label = '2'        # always set label, because this is not being done
                           # automatically 
 ```
-* links.py:  construction of joints with attached links and a frame located at
+* [`links.py`](https://github.com/prfraanje/python-robotics/blob/master/links.py)links.py:  construction of joints with attached links and a frame located at
              the end of the link, specified on the basis of Denavit Hartenberg
              parameters
 ```
@@ -52,8 +52,8 @@ print(L1.a)
 L1.set_delayed(prop='q',incr=30,delay=2,niter=20):
 print(L1.q)
 ```
-* examples:  frames_examples.py and links_examples.py give some examples for
-              using frames.py and links.py, see also ur5.py for a visualization
+* examples:  [frames_examples.py](https://github.com/prfraanje/python-robotics/blob/master/frames_examples.py) and [links_examples.py](https://github.com/prfraanje/python-robotics/blob/master/links_examples.py) give some examples for
+              using [frames.py](https://github.com/prfraanje/python-robotics/blob/master/frames.py) and [links.py](https://github.com/prfraanje/python-robotics/blob/master/links.py), see also [ur5.py](https://github.com/prfraanje/python-robotics/blob/master/ur5.py) for a visualization
               of the Universal Robot UR5 robot, e.g. try
 ```
 python ur5.py
