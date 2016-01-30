@@ -32,7 +32,7 @@ def isclose(a,b):
     if "isclose" in dir(np):
         return np.isclose(a,b)
     else:
-        return ( abs(a-b)<1e-6 )
+        return abs(a-b)<1e-6 
 
 
 # definition of Special Orthogonal Group SE(3) of 
