@@ -6,7 +6,12 @@ scene.fov = 0.01 # mimic orthographic projection
 scale = 1;
 F0 = frame([0,0,0],label='O',scale=scale)
 
-# two link planar
+# Denavit-Hartenberg parameters of the UR5 robot, see e.g. 
+# http://www.universal-robots.com/how-tos-and-faqs/faq/ur-faq/actual-center-of-mass-for-robot-17264/
+# note that the a's and the d's here are in meters, and the
+# alpha's and the theta's are in degrees
+# you may use radians as well, but then change the unit in links below to 
+# unit='rad'
 a1     = 0 # link length
 alpha1 = 90 # link twist
 d1     = .089159 # link offset (controllable)
@@ -43,6 +48,11 @@ d6     = 0.0823  # link offset (controllable)
 theta6 = 0 # joint angle (controllable)
 joint6 = 'r'
 
+# these are the joint variables
+# in these case they are all angles (in degrees)
+# that come on top of the offsets defined by the 
+# theta angles above, so use q as the joint variable 
+# and theta just as the offset
 q1 = 30 
 q2 = 30 
 q3 = 30 
